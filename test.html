@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="test.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Touch it!</h1>
+		<svg id="hamburger" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87 60">
+	
+	<defs>
+		<style>
+			svg {
+				width: 50%;
+				height: 50%;
+				overflow: visible;
+			}
+			.cls-1{fill:#002a54;}
+			.transparent{fill: transparent;}
+		</style>
+	</defs>
+	
+	<rect id="top" class="cls-1" y="0" x="0" width="87" height="12" rx="2.73" ry="2.73" rotate="0"/>
+	
+	<animate id="topStart"
+		href="#top"
+		attributeName="y"
+		from="0"
+		to="24"
+		dur=".1s"
+		begin="start.click"
+		fill="freeze"
+	/>
+	
+	<animateTransform id="topRotate"
+		href="#top"
+		attributeName="transform"
+		type="rotate"
+		from="0 43.5 30"
+		to="-45 43.5 30"
+		dur=".1s"
+		begin="topStart.end"
+		fill="freeze"
+	/>
+	
+	<animateTransform id="topRotateBack"
+		href="#top"
+		attributeName="transform"
+		type="rotate"
+		from="-45 43.5 30"
+		to="0 43.5 30"
+		dur=".1s"
+		begin="end.click"
+		fill="freeze"
+	/>
+	
+	<animate id="topEnd"
+		href="#top"
+		attributeName="y"
+		from="24"
+		to="0"
+		dur=".1s"
+		begin="topRotateBack.end"
+		fill="freeze"
+	/>
+	
+	<rect id="middle" class="cls-1" y="24" x="0" width="87" height="12" rx="2.73" ry="2.73"/>
+	
+	<animate id="middleWidthStart"
+		href="#middle"
+		attributeName="width"
+		from="87"
+		to="11"
+		dur=".01s"
+		begin="start.click + .1s"
+		fill="freeze"
+	/>
+	<animate id="middleXStart"
+		href="#middle"
+		attributeName="x"
+		from="0"
+		to="38"
+		dur=".01s"
+		begin="start.click + .1s"
+		fill="freeze"
+	/>
+	
+	<animate id="middleWidthEnd"
+		href="#middle"
+		attributeName="width"
+		from="11"
+		to="87"
+		dur=".01s"
+		begin="end.click + .1s"
+		fill="freeze"
+	/>
+	<animate id="middleXEnd"
+		href="#middle"
+		attributeName="x"
+		from="38"
+		to="0"
+		dur=".01s"
+		begin="end.click + .1s"
+		fill="freeze"
+	/>
+	
+	<rect id="bottom" class="cls-1" y="48" x="0" width="87" height="12" rx="2.73" ry="2.73" rotate="0"/>
+	
+	<animate id="bottomStart"
+		href="#bottom"
+		attributeName="y"
+		from="48"
+		to="24"
+		dur=".1s"
+		begin="start.click"
+		fill="freeze"
+	/>
+	<animateTransform id="bottomRotate"
+		href="#bottom"
+		attributeName="transform"
+		type="rotate"
+		from="0 43.5 30"
+		to="45 43.5 30"
+		dur=".1s"
+		begin="bottomStart.end"
+		fill="freeze"
+	/>
+	
+	<animateTransform id="bottomRotateBack"
+		href="#bottom"
+		attributeName="transform"
+		type="rotate"
+		from="45 43.5 30"
+		to="0 43.5 30"
+		dur=".1s"
+		begin="end.click"
+		fill="freeze"
+	/>
+	<animate id="bottomEnd"
+		href="#bottom"
+		attributeName="y"
+		from="24"
+		to="48"
+		dur=".1s"
+		begin="bottomRotateBack.end"
+		fill="freeze"
+	/>
+	
+	<rect id="end" y="0" x="0" width="0" height="0" class="transparent"/>
+	
+	<animate id="endButton"
+		href="#end"
+		attributeName="width"
+		from="87"
+		to="1"
+		dur=".01s"
+		begin="end.click"
+		fill="freeze"
+	/>
+	
+	<animate
+		href="#end"
+		attributeName="height"
+		from="60"
+		to="1"
+		dur=".01s"
+		begin="end.click"
+		fill="freeze"
+	/>
+	
+	<animate
+		href="#start"
+		attributeName="width"
+		from="1"
+		to="87"
+		dur=".01s"
+		begin="endButton.end"
+		fill="freeze"
+	/>
+	
+	<animate
+		href="#start"
+		attributeName="height"
+		from="1"
+		to="60"
+		dur=".01s"
+		begin="endButton.end"
+		fill="freeze"
+	/>
+	
+	<rect id="start" class="transparent" y="0" x="0" width="87" height="60"/>
+	
+	<animate id="startButton"
+		href="#start"
+		attributeName="width"
+		from="87"
+		to="1"
+		dur=".01s"
+		begin="start.click"
+		fill="freeze"
+	/>
+	
+	<animate
+		href="#start"
+		attributeName="height"
+		from="60"
+		to="1"
+		dur=".01s"
+		begin="start.click"
+		fill="freeze"
+	/>
+	
+	<animate
+		href="#end"
+		attributeName="width"
+		from="1"
+		to="87"
+		dur=".01s"
+		begin="startButton.end"
+		fill="freeze"
+	/>
+	
+	<animate
+		href="#end"
+		attributeName="height"
+		from="1"
+		to="60"
+		dur=".01s"
+		begin="startButton.end"
+		fill="freeze"
+	/>
+	
+</svg>
+  </body>
+</html>
